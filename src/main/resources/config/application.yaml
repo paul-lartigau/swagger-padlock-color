@@ -1,0 +1,21 @@
+---
+management:
+  endpoint:
+    heapdump:
+      access: 'read_only'
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'health'
+          - 'heapdump'
+          - 'info'
+          - 'scheduledtasks'
+          - 'threaddump'
+
+springdoc:
+  show-actuator: true
+  swagger-ui:
+    enabled: true
+  writer-with-order-by-keys: true
+...
